@@ -7,7 +7,9 @@ const Header = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.HeaderContainer}>
-            <Image source={require('../assets/logo.png')} style={styles.HeaderLogo} />
+            <Pressable onPress={() => navigation.navigate('Home')}>
+                <Image source={require('../assets/logo.png')} style={styles.HeaderLogo} />
+            </Pressable>
             <Pressable onPress={() => navigation.toggleDrawer()}>
                 <Image source={require('../assets/menu.png')} style={styles.HeaderMenuLogo} />
             </Pressable>

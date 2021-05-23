@@ -2,6 +2,7 @@
 import React from 'react';
 import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './ButtonComponent';
+import FAIcons from 'react-native-vector-icons/FontAwesome';
 
 const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2}) => {
     return (
@@ -27,6 +28,9 @@ const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2})
                   bgColor="#FFFFFFA6"
                   onPress={() => console.log('Existing Inventory was pressed')}
                 />
+              }
+              {model !== 'Accessories' &&
+                <FAIcons name="chevron-down" color="black" />
               }
             </View>
         </View>
@@ -58,7 +62,7 @@ const styles = StyleSheet.create({
     },
     Buttons: {
       position: 'absolute',
-      bottom: 50,
+      bottom: 120,
       width: '100%',
     },
     VehicleOption: {
