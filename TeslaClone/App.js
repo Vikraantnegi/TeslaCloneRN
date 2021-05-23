@@ -4,6 +4,7 @@ import Home from './src/screens/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import  DrawerContent  from './src/screens/DrawerContent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -11,6 +12,7 @@ const DrawerScreen = () => (
   <Drawer.Navigator
     initialRouteName="Home"
     drawerPosition="right"
+    drawerContent={ props => <DrawerContent {...props}/>}
   >
     <Drawer.Screen name="Home" component={Home} />
   </Drawer.Navigator>

@@ -5,7 +5,7 @@ import VehicleData from '../assets/cars';
 import Header from '../components/Header';
 import MainScreenList from '../components/MainScreenList';
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View style={styles.AppContainer}>
       <Header />

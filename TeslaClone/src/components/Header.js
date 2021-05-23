@@ -1,12 +1,16 @@
 /* eslint-disable prettier/prettier */
+import { useNavigation } from '@react-navigation/core';
 import React from 'react';
-import { Image, StyleSheet, View } from 'react-native';
+import { Image, Pressable, StyleSheet, View } from 'react-native';
 
 const Header = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.HeaderContainer}>
             <Image source={require('../assets/logo.png')} style={styles.HeaderLogo} />
-            <Image source={require('../assets/menu.png')} style={styles.HeaderMenuLogo} />
+            <Pressable onPress={() => navigation.toggleDrawer()}>
+                <Image source={require('../assets/menu.png')} style={styles.HeaderMenuLogo} />
+            </Pressable>
         </View>
     );
 };
