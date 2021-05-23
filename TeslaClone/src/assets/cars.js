@@ -38,4 +38,8 @@ export default [{
   image: require('../assets/SolarRoof.jpeg'),
   button1: 'Order Now',
   button2: 'Learn More',
+}, {
+  name: 'Accessories',
+  image: require('../assets/Accessories.jpg'),
+  button1: 'Shop Now',
 }];

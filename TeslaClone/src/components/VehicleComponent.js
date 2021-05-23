@@ -12,18 +12,22 @@ const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2})
               <Text style={styles.VehiclePrice}>{tagline}{' '}{taglineCTA && <Text style={styles.VehicleOption}>{taglineCTA}</Text>}</Text>
             </View>
             <View style={styles.Buttons}>
-              <ButtonComponent
-                text={button1}
-                color="#FFFFFF"
-                bgColor="#171A20CC"
-                onPress={() => console.log('Custom Order was pressed')}
-              />
-              <ButtonComponent
-                text={button2}
-                color="#171A20"
-                bgColor="#FFFFFFA6"
-                onPress={() => console.log('Existing Inventory was pressed')}
-              />
+              {button1 &&
+                <ButtonComponent
+                  text={button1}
+                  color="#FFFFFF"
+                  bgColor="#171A20CC"
+                  onPress={() => console.log('Custom Order was pressed')}
+                />
+              }
+              {button2 &&
+                <ButtonComponent
+                  text={button2}
+                  color="#171A20"
+                  bgColor="#FFFFFFA6"
+                  onPress={() => console.log('Existing Inventory was pressed')}
+                />
+              }
             </View>
         </View>
     );
