@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 export default [{
   name: 'Model S',
-  tagline: 'Starting at $69,420',
+  tagline: 'Order Online for',
+  taglineCTA: 'Touchless Delivery',
   image: require('../assets/ModelS.jpeg'),
   button1: 'Custom Order',
   button2: 'Existing Inventory',
@@ -40,6 +41,6 @@ export default [{
   button2: 'Learn More',
 }, {
   name: 'Accessories',
-  image: require('../assets/Accessories.jpg'),
+  image: require('../assets/Accessories.png'),
   button1: 'Shop Now',
 }];

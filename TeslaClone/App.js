@@ -2,8 +2,8 @@
 import React from 'react';
 import { StyleSheet, View} from 'react-native';
 import VehicleData from './src/assets/cars';
-import Header from './src/components/Header';
-import MainScreenList from './src/components/MainScreenList';
+import MainScreenList from './src/components/LandingScreen/MainScreenList';
+import Header from './src/components/LandingScreen/Header';
 
 const App = () => {
   return (
