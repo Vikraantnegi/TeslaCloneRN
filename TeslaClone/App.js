@@ -1,25 +1,21 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { StyleSheet, View} from 'react-native';
-import VehicleData from './src/assets/cars';
-import Header from './src/components/Header';
-import MainScreenList from './src/components/MainScreenList';
+import Home from './src/screens/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
+const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <View style={styles.AppContainer}>
-      <Header />
-      <MainScreenList data={VehicleData} />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
-const styles = StyleSheet.create({
-  AppContainer: {
-    height: '100%',
-    backgroundColor: 'white',
-    flex: 1,
-  },
-});
 
 export default App;
