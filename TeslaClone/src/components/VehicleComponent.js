@@ -1,15 +1,28 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import ButtonComponent from './ButtonComponent';
 
-const VehicleComponent = () => {
+const VehicleComponent = ({model, image, tagline}) => {
     return (
         <View style={styles.VehicleContainer}>
-            <ImageBackground source={require('../assets/ModelS.jpeg')} style={styles.VehicleImage} />
+            <ImageBackground source={image} style={styles.VehicleImage} />
             <View style={styles.VehicleDescription}>
-            <Text style={styles.VehicleModel}>Model S</Text>
-            <Text style={styles.VehiclePrice}>Starting at $75,320</Text>
+              <Text style={styles.VehicleModel}>{model}</Text>
+              <Text style={styles.VehiclePrice}>{tagline}</Text>
             </View>
+            <ButtonComponent 
+              text="Custom Order"
+              color="#FFFFFF"
+              bgColor="#171A20CC"
+              onPress={() => console.log('Custom Order was pressed')}
+            />
+            <ButtonComponent
+              text="Existing Inventory"
+              color="#171A20"
+              bgColor="#FFFFFFA6"
+              onPress={() => console.log('Existing Inventory was pressed')}
+            />
         </View>
     );
 };
