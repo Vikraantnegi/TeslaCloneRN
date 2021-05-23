@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export default [{
   name: 'Model S',
   tagline: 'Starting at $69,420',
