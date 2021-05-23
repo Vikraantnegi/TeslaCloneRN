@@ -3,7 +3,7 @@ import React from 'react';
 import { FlatList, View, StyleSheet, Dimensions } from 'react-native';
 import VehicleComponent from './VehicleComponent';
 
-const VehicleList = ({data}) => {
+const MainScreenList = ({data}) => {
     return (
         <View style={styles.ListContainer}>
             <FlatList
@@ -36,4 +36,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default VehicleList;
+export default MainScreenList;

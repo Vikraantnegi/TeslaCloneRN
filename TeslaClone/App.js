@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { SafeAreaView, ScrollView, StatusBar, ImageBackground, StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import VehicleData from './src/assets/cars';
 import Header from './src/components/Header';
-import VehicleList from './src/components/VehicleList';
+import MainScreenList from './src/components/MainScreenList';
 
 const App = () => {
   return (
     <View style={styles.AppContainer}>
       <Header />
-      <VehicleList data={VehicleData} />
+      <MainScreenList data={VehicleData} />
     </View>
   );
 };
