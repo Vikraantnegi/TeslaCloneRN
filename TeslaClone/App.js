@@ -6,12 +6,25 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
 const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
+const DrawerScreen = () => (
+  <Drawer.Navigator
+    initialRouteName="Home"
+    drawerPosition="right"
+  >
+    <Drawer.Screen name="Home" component={Home} />
+  </Drawer.Navigator>
+);
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="Home" component={DrawerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
