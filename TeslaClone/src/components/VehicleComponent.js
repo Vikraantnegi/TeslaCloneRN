@@ -3,13 +3,13 @@ import React from 'react';
 import { ImageBackground, StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './ButtonComponent';
 
-const VehicleComponent = ({model, image, tagline}) => {
+const VehicleComponent = ({model, image, tagline, taglineCTA}) => {
     return (
         <View style={styles.VehicleContainer}>
             <ImageBackground source={image} style={styles.VehicleImage} />
             <View style={styles.VehicleDescription}>
               <Text style={styles.VehicleModel}>{model}</Text>
-              <Text style={styles.VehiclePrice}>{tagline}</Text>
+              <Text style={styles.VehiclePrice}>{tagline}{' '}{taglineCTA && <Text style={styles.VehicleOption}>{taglineCTA}</Text>}</Text>
             </View>
             <View style={styles.Buttons}>
               <ButtonComponent
@@ -56,6 +56,9 @@ const styles = StyleSheet.create({
       position: 'absolute',
       bottom: 50,
       width: '100%',
+    },
+    VehicleOption: {
+      textDecorationLine: 'underline',
     },
   });
 
