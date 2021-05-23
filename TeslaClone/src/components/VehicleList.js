@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { FlatList, View, StyleSheet } from 'react-native';
+import { FlatList, View, StyleSheet, Dimensions } from 'react-native';
 import VehicleComponent from './VehicleComponent';
 
 const VehicleList = ({data}) => {
@@ -17,6 +17,10 @@ const VehicleList = ({data}) => {
                     />
                 )}
                 keyExtractor={(vehicle, index) => index}
+                snapToAlignment={'start'}
+                snapToInterval={Dimensions.get('screen').height}
+                decelerationRate={'fast'}
+                showsVerticalScrollIndicator={false}
             />
         </View>
     );

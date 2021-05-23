@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './ButtonComponent';
 
 const VehicleComponent = ({model, image, tagline, taglineCTA}) => {
@@ -32,7 +32,7 @@ const VehicleComponent = ({model, image, tagline, taglineCTA}) => {
 const styles = StyleSheet.create({
     VehicleContainer: {
       width: '100%',
-      height: '100%',
+      height: Dimensions.get('screen').height,
     },
     VehicleImage: {
       width: '100%',
