@@ -11,18 +11,20 @@ const VehicleComponent = ({model, image, tagline}) => {
               <Text style={styles.VehicleModel}>{model}</Text>
               <Text style={styles.VehiclePrice}>{tagline}</Text>
             </View>
-            <ButtonComponent 
-              text="Custom Order"
-              color="#FFFFFF"
-              bgColor="#171A20CC"
-              onPress={() => console.log('Custom Order was pressed')}
-            />
-            <ButtonComponent
-              text="Existing Inventory"
-              color="#171A20"
-              bgColor="#FFFFFFA6"
-              onPress={() => console.log('Existing Inventory was pressed')}
-            />
+            <View style={styles.Buttons}>
+              <ButtonComponent
+                text="Custom Order"
+                color="#FFFFFF"
+                bgColor="#171A20CC"
+                onPress={() => console.log('Custom Order was pressed')}
+              />
+              <ButtonComponent
+                text="Existing Inventory"
+                color="#171A20"
+                bgColor="#FFFFFFA6"
+                onPress={() => console.log('Existing Inventory was pressed')}
+              />
+            </View>
         </View>
     );
 };
@@ -49,6 +51,11 @@ const styles = StyleSheet.create({
     VehiclePrice: {
       fontSize: 16,
       color: '#5c5e62',
+    },
+    Buttons: {
+      position: 'absolute',
+      bottom: 50,
+      width: '100%',
     },
   });
 
