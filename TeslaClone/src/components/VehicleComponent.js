@@ -3,7 +3,7 @@ import React from 'react';
 import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './ButtonComponent';
 
-const VehicleComponent = ({model, image, tagline, taglineCTA}) => {
+const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2}) => {
     return (
         <View style={styles.VehicleContainer}>
             <ImageBackground source={image} style={styles.VehicleImage} />
@@ -13,13 +13,13 @@ const VehicleComponent = ({model, image, tagline, taglineCTA}) => {
             </View>
             <View style={styles.Buttons}>
               <ButtonComponent
-                text="Custom Order"
+                text={button1}
                 color="#FFFFFF"
                 bgColor="#171A20CC"
                 onPress={() => console.log('Custom Order was pressed')}
               />
               <ButtonComponent
-                text="Existing Inventory"
+                text={button2}
                 color="#171A20"
                 bgColor="#FFFFFFA6"
                 onPress={() => console.log('Existing Inventory was pressed')}

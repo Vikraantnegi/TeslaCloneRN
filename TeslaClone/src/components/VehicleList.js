@@ -14,6 +14,8 @@ const VehicleList = ({data}) => {
                         image={item.image}
                         tagline={item.tagline}
                         taglineCTA={item.taglineCTA}
+                        button1={item.button1}
+                        button2={item.button2}
                     />
                 )}
                 keyExtractor={(vehicle, index) => index}
