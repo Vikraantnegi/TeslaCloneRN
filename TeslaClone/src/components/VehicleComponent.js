@@ -2,7 +2,7 @@
 import React from 'react';
 import { Dimensions, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import ButtonComponent from './ButtonComponent';
-import FAIcons from 'react-native-vector-icons/FontAwesome';
+import LottieView from 'lottie-react-native';
 
 const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2}) => {
     return (
@@ -30,7 +30,7 @@ const VehicleComponent = ({model, image, tagline, taglineCTA, button1, button2})
                 />
               }
               {model !== 'Accessories' &&
-                <FAIcons name="chevron-down" color="black" />
+                <LottieView source={require('../assets/lf20_h03opD.json')} autoPlay loop style={styles.arrowAnim} />
               }
             </View>
         </View>
@@ -62,11 +62,16 @@ const styles = StyleSheet.create({
     },
     Buttons: {
       position: 'absolute',
-      bottom: 120,
+      bottom: 80,
       width: '100%',
     },
     VehicleOption: {
       textDecorationLine: 'underline',
+    },
+    arrowAnim: {
+      marginTop: 20,
+      height: 50,
+      alignSelf: 'center',
     },
   });
 

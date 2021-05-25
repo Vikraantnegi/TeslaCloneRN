@@ -37,6 +37,7 @@ const DrawerContent = (props) => {
           {
             routes.map((route, index) => (
               <DrawerItem
+                key={index}
                 pressOpacity={0.2}
                 label={route.name}
                 labelStyle={styles.drawerText}
